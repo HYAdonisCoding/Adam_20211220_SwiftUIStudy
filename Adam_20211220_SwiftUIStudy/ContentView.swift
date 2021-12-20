@@ -9,69 +9,62 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    /// 双向绑定
+    @State var name = ""
+    @State var phone = ""
+    @State var address = ""
+    
+    @State var typeIndex = 0
+    
+    @State var showAlert = false
+    
+    let tags = ["家", "学校", "单位"]
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            
+            Form {
+                Section {
+                    
+                    HStack {
+                        Text("收货人")
+                        TextField("请填写收货人姓名", text: $name)
+                    }
+                    HStack {
+                        Text("手机")
+                        TextField("请填写收货人手机号码", text: $phone)
+                    }
+                    HStack {
+                        Text("详细地址")
+                        TextField("请填写收货人详细地址", text: $address)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                Section(header: Text("标签")) {
+                    Picker("标签", selection: $typeIndex) {
+                        ForEach(0..<tags.count, id: \.self) { index in
+                            Text(tags[index])
+                        }
+                        
+                    }.pickerStyle(.segmented)
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                Section(header: Text("完成")) {
+                    Button("填好了") {
+                        // 点击操作
+                        self.showAlert = true
                     }
                 }
             }
-            Text("Select an item")
+            .navigationTitle(Text("添加收货地址"))
+            .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("默认地址"),
+                        message: Text("\(name)\n\(phone)\n\(address)\n\(typeIndex)"),
+                        dismissButton: .default(Text("确认")))
+                }
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+   
 }
 
 private let itemFormatter: DateFormatter = {
