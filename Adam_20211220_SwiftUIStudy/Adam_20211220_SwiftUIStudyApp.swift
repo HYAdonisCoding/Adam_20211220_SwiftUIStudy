@@ -13,7 +13,7 @@ struct Adam_20211220_SwiftUIStudyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FirstPageView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

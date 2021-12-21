@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AddAddressView.swift
 //  Adam_20211220_SwiftUIStudy
 //
 //  Created by Adam on 2021/12/20.
@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import Combine
 
-struct ContentView: View {
+struct AddAddressView: View {
     /// 双向绑定
     @State private var name = ""
     // 存储类实例
@@ -37,7 +37,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             
             Form {
                 Section {
@@ -87,7 +87,7 @@ struct ContentView: View {
                         // 点击空白出键盘消失
                         
                     }
-        }
+//        }
     }
 
    
@@ -102,7 +102,7 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        AddAddressView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 
