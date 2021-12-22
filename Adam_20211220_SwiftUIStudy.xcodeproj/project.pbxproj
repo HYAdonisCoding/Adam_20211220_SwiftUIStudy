@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FB40E2771D88C00048D01 /* FirstPageView.swift */; };
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
+		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
 		668AD0B52770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */; };
 		668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B62770942C00F6EF88 /* AddAddressView.swift */; };
 		668AD0B92770943100F6EF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668AD0B82770943100F6EF88 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		665FB40E2771D88C00048D01 /* FirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageView.swift; sourceTree = "<group>"; };
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
+		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
 		668AD0B12770942C00F6EF88 /* Adam_20211220_SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adam_20211220_SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam_20211220_SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		668AD0B62770942C00F6EF88 /* AddAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
 				668198702772B3DB00A784CC /* GuessFlagView.swift */,
 				665FB40E2771D88C00048D01 /* FirstPageView.swift */,
+				668198722772F1E600A784CC /* FirstPageTCell.swift */,
 				668AD0B82770943100F6EF88 /* Assets.xcassets */,
 				668AD0BD2770943100F6EF88 /* Persistence.swift */,
 				668AD0BF2770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,

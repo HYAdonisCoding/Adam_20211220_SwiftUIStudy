@@ -13,7 +13,23 @@ struct AddAddressView: View {
     /// 双向绑定
     @State private var name = ""
     // 存储类实例
-    @ObservedObject var loginInfo = LoginInfo()
+//    @ObservedObject var loginInfo = LoginInfo()
+    @State private var phone: String = "" {
+        didSet {
+            // 限制输入内容的长度，超长以后就使用oldValue
+            if phone.count > 11, oldValue.count <= 11 {
+                phone = oldValue
+                print("1 ", phone)
+            } else {
+                // 关键代码
+                // 判断输入内容是否为纯数字，否则使用oldValue
+                if !phone.validate("^[0-9]*$"), oldValue.validate("^[0-9]*$") {
+                    phone = oldValue
+                    print("2 ", phone)
+                }
+            }
+        }
+    }
     
     @State private var address = ""
     
@@ -26,15 +42,24 @@ struct AddAddressView: View {
     private var configMsg: String {
         """
         收货人: \(name)
-        手机: \(loginInfo.phoneNo)
+        手机: \(phone)
         详细地址: \(address)
         标签: \(tags[typeIndex])
         """
     }
     
     private var invalidInput: Bool {
-        name.count < 2 || loginInfo.phoneNo.count != 11 || address.isEmpty
+        name.count < 2 || phone.count != 11 || address.isEmpty
     }
+    
+    let tapG = TapGesture(count: 1).onEnded { (touch) in
+        print(touch)
+//        if((touch.view)?.isKind(of: UIButton.self))!{
+//            return false
+//        }
+//        return true;
+    }
+    
     
     var body: some View {
 //        NavigationView {
@@ -49,11 +74,10 @@ struct AddAddressView: View {
                     HStack {
                         Text("手机")
                         
-                        TextField("请填写收货人手机号码", text: $loginInfo.phoneNo, onEditingChanged: { (edit) in
-                            print(self.loginInfo.phoneNo)
+                        TextField("请填写收货人手机号码", text: $phone, onEditingChanged: { (edit) in
+                            print(phone)
                         })
                             .keyboardType(.numberPad)
-                            .textContentType(.telephoneNumber)
                     }
                     HStack {
                         Text("详细地址")
@@ -66,12 +90,14 @@ struct AddAddressView: View {
                             Text(tags[index])
                         }
                         
-                    }.pickerStyle(.segmented)
+                    }
+                    .pickerStyle(.segmented)
                 }
                 Section(header: Text("完成")) {
                     Button("填好了") {
                         // 点击操作
                         self.showAlert = true
+                        print("onTap Button")
                     }
                     .disabled(invalidInput)
                 }
@@ -84,13 +110,19 @@ struct AddAddressView: View {
                         dismissButton: .default(Text("确认")))
                 }
             .onTapGesture {
-                        // 点击空白出键盘消失
-                        
-                    }
+                // 点击空白出键盘消失
+                print("onTap   Gesture")
+                UIApplication.shared.endEditing()
+            }
 //        }
     }
 
-   
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+            if((touch.view)?.isKind(of: UIButton.self))!{
+                return false
+            }
+            return true;
+    }
 }
 
 private let itemFormatter: DateFormatter = {

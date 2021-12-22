@@ -16,20 +16,9 @@ struct FirstPageView: View {
     var body: some View {
         NavigationView {
             List {
-                
-                ForEach(0..<data.count) { idx in
-                    
-                    NavigationLink(destination: AddAddressView(), label: {
-                        Text(data[idx])
-                    })
-                }
+                FirstPageTCell(AddAddressView(), "AddAddressView")
+                FirstPageTCell(GuessFlagView(), "GuessFlagView")
             }
-            /// Presented
-//            .sheet(isPresented: $pushKey, onDismiss: {
-//
-//            }, content: {
-//                AddAddressView()
-//            })
             .listStyle(.plain)
             .navigationTitle(Text("Home"))
         }
