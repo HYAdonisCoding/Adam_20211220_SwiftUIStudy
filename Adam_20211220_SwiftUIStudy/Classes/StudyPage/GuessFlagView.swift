@@ -36,7 +36,7 @@ struct GuessFlagView: View {
                 }
                 ForEach(0..<3) { idx in
                     Button(action: {
-                        self.alertTitle = idx == self.currentCountry ? "答对" : "答错"
+                        self.alertTitle = idx == self.currentCountry ? "恭喜你，答对了" : "答错了，继续努力"
                         self.showAlert = true
                     }, label: {
                         Image(self.countries[idx])

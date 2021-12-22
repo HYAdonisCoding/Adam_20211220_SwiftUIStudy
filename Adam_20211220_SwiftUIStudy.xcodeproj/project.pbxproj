@@ -81,6 +81,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		668198742773158700A784CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66819877277315FA00A784CC /* StudyPage */,
+				66819876277315C600A784CC /* Resources */,
+				66819875277315B300A784CC /* FirstPage */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		66819875277315B300A784CC /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				665FB40E2771D88C00048D01 /* FirstPageView.swift */,
+				668198722772F1E600A784CC /* FirstPageTCell.swift */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		66819876277315C600A784CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */,
+				668AD0B82770943100F6EF88 /* Assets.xcassets */,
+				668AD0BF2770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld */,
+				668AD0BD2770943100F6EF88 /* Persistence.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66819877277315FA00A784CC /* StudyPage */ = {
+			isa = PBXGroup;
+			children = (
+				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
+				668198702772B3DB00A784CC /* GuessFlagView.swift */,
+			);
+			path = StudyPage;
+			sourceTree = "<group>";
+		};
 		668AD0A82770942C00F6EF88 = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +143,7 @@
 		668AD0B32770942C00F6EF88 /* Adam_20211220_SwiftUIStudy */ = {
 			isa = PBXGroup;
 			children = (
-				668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */,
-				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
-				668198702772B3DB00A784CC /* GuessFlagView.swift */,
-				665FB40E2771D88C00048D01 /* FirstPageView.swift */,
-				668198722772F1E600A784CC /* FirstPageTCell.swift */,
-				668AD0B82770943100F6EF88 /* Assets.xcassets */,
-				668AD0BD2770943100F6EF88 /* Persistence.swift */,
-				668AD0BF2770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld */,
+				668198742773158700A784CC /* Classes */,
 				668AD0BA2770943100F6EF88 /* Preview Content */,
 			);
 			path = Adam_20211220_SwiftUIStudy;
