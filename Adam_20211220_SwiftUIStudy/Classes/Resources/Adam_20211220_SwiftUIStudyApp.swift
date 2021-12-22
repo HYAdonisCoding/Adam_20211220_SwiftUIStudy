@@ -20,6 +20,7 @@ struct Adam_20211220_SwiftUIStudyApp: App {
 }
 
 extension UIApplication {
+    /// 收起键盘
     func endEditing() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }

@@ -13,6 +13,7 @@ struct FirstPageView: View {
                                        ]),
                         FirstPageModel("View layout",
                                        [FirstPageDataModel(page: GuessFlagView(), title: "GuessFlagView"),
+                                        FirstPageDataModel(page: AboutModifierView(), title: "AboutModifierView"),
                                        ])
                     ]
     

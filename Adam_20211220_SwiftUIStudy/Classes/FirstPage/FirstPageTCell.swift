@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+var colors = [Color.red, Color.orange, Color.yellow, Color.green, Color.cyan, Color.blue, Color.purple, Color.brown]
+func randomColor() -> Color {
+    colors[Int.random(in: 0..<colors.count)]
+}
+
 struct FirstPageTCell: View {
-    @State private var colors = [Color.red, Color.orange, Color.yellow, Color.green, Color.cyan, Color.blue, Color.purple, Color.brown]
     
     init(_ pushViewClass: Any, _ title: String) {
         self.pushViewClass = pushViewClass
@@ -23,7 +27,7 @@ struct FirstPageTCell: View {
         NavigationLink(destination: AnyView(_fromValue: pushViewClass)) {
             Text(title)
                 .font(.headline)
-                .foregroundColor(colors[Int.random(in: 0..<colors.count)])
+                .foregroundColor(randomColor())
                 
                 
         }
