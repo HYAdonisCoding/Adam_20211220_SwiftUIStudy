@@ -14,20 +14,30 @@ func randomColor() -> Color {
 
 struct FirstPageTCell: View {
     
-    init(_ pushViewClass: Any, _ title: String) {
+    init(_ pushViewClass: Any, _ title: String, _ subTitle: String = "") {
         self.pushViewClass = pushViewClass
         self.title = title
-
+        self.subTitle = subTitle
     }
     var pushViewClass: Any
     var title: String
+    var subTitle: String
     
     var body: some View {
          
         NavigationLink(destination: AnyView(_fromValue: pushViewClass)) {
-            Text(title)
-                .font(.headline)
-                .foregroundColor(randomColor())
+            VStack(alignment: .leading, spacing: 5) {
+                Text(title)
+                    .font(.headline)
+                    .foregroundColor(randomColor())
+                if (subTitle).isEmpty == false {
+                    Text(subTitle)
+                        .font(.system(size: 12))
+                        .foregroundColor(randomColor())
+                }
+            }
+                
+               
                 
                 
         }

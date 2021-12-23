@@ -9,10 +9,10 @@ import SwiftUI
 
 struct FirstPageView: View {
     private var data = [FirstPageModel("Form",
-                                       [FirstPageDataModel(page: AddAddressView(), title: "AddAddressView"),
+                                       [FirstPageDataModel(page: AddAddressView(), title: "AddAddressView", subTitle:"Add recipient information, test form"),
                                        ]),
                         FirstPageModel("View layout",
-                                       [FirstPageDataModel(page: GuessFlagView(), title: "GuessFlagView"),
+                                       [FirstPageDataModel(page: GuessFlagView(), title: "GuessFlagView", subTitle: "Guess the flag game"),
                                         FirstPageDataModel(page: AboutModifierView(), title: "AboutModifierView"),
                                        ])
                     ]
@@ -28,7 +28,7 @@ struct FirstPageView: View {
                     Section(s.sectionTitle) {
                         ForEach(s.datas.indices) { idx in
                             let m = s.datas[idx]
-                            FirstPageTCell(m.page, m.title)
+                            FirstPageTCell(m.page, m.title, m.subTitle)
                             
                         }
                     }
