@@ -26,6 +26,9 @@
 		66A08A9B27741E4100A7033D /* MultipleImplicitAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08A9A27741E4100A7033D /* MultipleImplicitAnimationView.swift */; };
 		66A08A9D27741E5900A7033D /* AnimatingGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08A9C27741E5900A7033D /* AnimatingGestureView.swift */; };
 		66A08A9F27741E6C00A7033D /* TransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08A9E27741E6C00A7033D /* TransitionsView.swift */; };
+		66A08AA22774620800A7033D /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA12774620800A7033D /* ExpensesView.swift */; };
+		66A08AA42774629100A7033D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA32774629100A7033D /* AddView.swift */; };
+		66A08AA62774649C00A7033D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA52774649C00A7033D /* Expenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		66A08A9A27741E4100A7033D /* MultipleImplicitAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleImplicitAnimationView.swift; sourceTree = "<group>"; };
 		66A08A9C27741E5900A7033D /* AnimatingGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGestureView.swift; sourceTree = "<group>"; };
 		66A08A9E27741E6C00A7033D /* TransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsView.swift; sourceTree = "<group>"; };
+		66A08AA12774620800A7033D /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
+		66A08AA32774629100A7033D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		66A08AA52774649C00A7033D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				668198702772B3DB00A784CC /* GuessFlagView.swift */,
 				668198782773195800A784CC /* AboutModifierView.swift */,
 				66A08A93277407EE00A7033D /* Animations */,
+				66A08AA0277461ED00A7033D /* Expenses */,
 			);
 			path = StudyPage;
 			sourceTree = "<group>";
@@ -201,6 +208,16 @@
 				66A08A9E27741E6C00A7033D /* TransitionsView.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		66A08AA0277461ED00A7033D /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				66A08AA12774620800A7033D /* ExpensesView.swift */,
+				66A08AA52774649C00A7033D /* Expenses.swift */,
+				66A08AA32774629100A7033D /* AddView.swift */,
+			);
+			path = Expenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,10 +359,13 @@
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,
 				668AD0C12770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld in Sources */,
+				66A08AA62774649C00A7033D /* Expenses.swift in Sources */,
 				668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */,
 				668AD0B52770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift in Sources */,
 				66A08A952774080C00A7033D /* BaseAnimationView.swift in Sources */,
+				66A08AA42774629100A7033D /* AddView.swift in Sources */,
 				668198792773195800A784CC /* AboutModifierView.swift in Sources */,
+				66A08AA22774620800A7033D /* ExpensesView.swift in Sources */,
 				66A08A9F27741E6C00A7033D /* TransitionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

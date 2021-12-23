@@ -24,11 +24,12 @@ struct TransitionsView: View {
             .foregroundColor(.white)
             .padding(20)
             .background(randomColor())
+            .clipShape(RoundedRectangle(cornerRadius: 10))
             
             if isShow {
                 Rectangle()
                     .fill(randomColor())
-                    .frame(width: 300, height: 200, alignment: .leading)
+                    .frame(width: 300, height: 200, alignment: .trailing)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .transition(
                         .asymmetric(
