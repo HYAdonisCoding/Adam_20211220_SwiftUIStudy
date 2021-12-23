@@ -8,7 +8,15 @@
 import SwiftUI
 
 struct FirstPageView: View {
-    private var data = [FirstPageModel("Form",
+    private var data = [FirstPageModel("Animation",
+                                       [FirstPageDataModel(page: BaseAnimationView(), title: "BaseAnimationView", subTitle:"Implicit animation"),
+                                        FirstPageDataModel(page: AnimatingBindingsView(), title: "AnimatingBindingsView"),
+                                        FirstPageDataModel(page: ExplictAnimationsView(), title: "ExplictAnimationsView"),
+                                        FirstPageDataModel(page: MultipleImplicitAnimationView(), title: "MultipleImplicitAnimationView"),
+                                        FirstPageDataModel(page: AnimatingGestureView(), title: "AnimatingGestureView"),
+                                        FirstPageDataModel(page: TransitionsView(), title: "TransitionsView"),
+                                       ]),
+                        FirstPageModel("Form",
                                        [FirstPageDataModel(page: AddAddressView(), title: "AddAddressView", subTitle:"Add recipient information, test form"),
                                        ]),
                         FirstPageModel("View layout",
