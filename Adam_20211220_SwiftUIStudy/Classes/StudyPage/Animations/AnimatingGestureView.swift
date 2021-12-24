@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnimatingGestureView: View {
-    let letters = Array("学SwiftUI厚积薄发")
+    let letters = Array("天行健君子以自强不息")
     
     @State private var dragOffset: CGSize = .zero
     @State private var dragOffset2: CGSize = .zero
@@ -36,14 +36,14 @@ struct AnimatingGestureView: View {
                 )
             
             //小实战
-            HStack(spacing: 10) {
+            HStack(spacing: 0) {
                 ForEach(letters.indices) { idx in
                     Text(String(letters[idx]))
                         .font(.title)
                         .foregroundColor(.white)
                         .background(enabled ? randomColor() : Color.black)
                         .offset(dragOffset2)
-                        .animation(Animation.default.delay(Double(idx / 20)))
+                        .animation(Animation.default.delay(Double(idx) / 20))
                 }
             }
             .gesture(
