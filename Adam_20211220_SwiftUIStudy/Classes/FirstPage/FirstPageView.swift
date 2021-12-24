@@ -10,6 +10,7 @@ import SwiftUI
 struct FirstPageView: View {
     private var data = [FirstPageModel("Actual Combat",
                                        [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
+                                        FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
                                        ]),
                         FirstPageModel("Animation",
                                        [FirstPageDataModel(page: BaseAnimationView(), title: "BaseAnimationView", subTitle:"Implicit animation"),

@@ -29,6 +29,12 @@
 		66A08AA22774620800A7033D /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA12774620800A7033D /* ExpensesView.swift */; };
 		66A08AA42774629100A7033D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA32774629100A7033D /* AddView.swift */; };
 		66A08AA62774649C00A7033D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA52774649C00A7033D /* Expenses.swift */; };
+		66A08AA927746AD200A7033D /* ShenZhouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AA827746AD200A7033D /* ShenZhouView.swift */; };
+		66A08AAB27746AE000A7033D /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AAA27746AE000A7033D /* PlanView.swift */; };
+		66A08AAE27746CA400A7033D /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 66A08AAC27746CA400A7033D /* astronauts.json */; };
+		66A08AAF27746CA400A7033D /* plans.json in Resources */ = {isa = PBXBuildFile; fileRef = 66A08AAD27746CA400A7033D /* plans.json */; };
+		66A08AB227746D2500A7033D /* BundleDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AB127746D2500A7033D /* BundleDecodable.swift */; };
+		66A08AB427746E2400A7033D /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A08AB327746E2400A7033D /* Plan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,12 @@
 		66A08AA12774620800A7033D /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		66A08AA32774629100A7033D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		66A08AA52774649C00A7033D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		66A08AA827746AD200A7033D /* ShenZhouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShenZhouView.swift; sourceTree = "<group>"; };
+		66A08AAA27746AE000A7033D /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		66A08AAC27746CA400A7033D /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		66A08AAD27746CA400A7033D /* plans.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plans.json; sourceTree = "<group>"; };
+		66A08AB127746D2500A7033D /* BundleDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDecodable.swift; sourceTree = "<group>"; };
+		66A08AB327746E2400A7033D /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 				66819877277315FA00A784CC /* StudyPage */,
 				66819876277315C600A784CC /* Resources */,
 				66819875277315B300A784CC /* FirstPage */,
+				66A08AB027746D0700A7033D /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -139,6 +152,7 @@
 				668198782773195800A784CC /* AboutModifierView.swift */,
 				66A08A93277407EE00A7033D /* Animations */,
 				66A08AA0277461ED00A7033D /* Expenses */,
+				66A08AA727746A9400A7033D /* ShenZhou */,
 			);
 			path = StudyPage;
 			sourceTree = "<group>";
@@ -218,6 +232,26 @@
 				66A08AA32774629100A7033D /* AddView.swift */,
 			);
 			path = Expenses;
+			sourceTree = "<group>";
+		};
+		66A08AA727746A9400A7033D /* ShenZhou */ = {
+			isa = PBXGroup;
+			children = (
+				66A08AA827746AD200A7033D /* ShenZhouView.swift */,
+				66A08AAA27746AE000A7033D /* PlanView.swift */,
+				66A08AB327746E2400A7033D /* Plan.swift */,
+				66A08AAC27746CA400A7033D /* astronauts.json */,
+				66A08AAD27746CA400A7033D /* plans.json */,
+			);
+			path = ShenZhou;
+			sourceTree = "<group>";
+		};
+		66A08AB027746D0700A7033D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				66A08AB127746D2500A7033D /* BundleDecodable.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +358,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A08AAF27746CA400A7033D /* plans.json in Resources */,
+				66A08AAE27746CA400A7033D /* astronauts.json in Resources */,
 				668AD0BC2770943100F6EF88 /* Preview Assets.xcassets in Resources */,
 				668AD0B92770943100F6EF88 /* Assets.xcassets in Resources */,
 			);
@@ -352,12 +388,16 @@
 			files = (
 				66A08A9B27741E4100A7033D /* MultipleImplicitAnimationView.swift in Sources */,
 				66A08A9D27741E5900A7033D /* AnimatingGestureView.swift in Sources */,
+				66A08AB427746E2400A7033D /* Plan.swift in Sources */,
 				66A08A9927741E0C00A7033D /* ExplictAnimationsView.swift in Sources */,
 				668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */,
+				66A08AAB27746AE000A7033D /* PlanView.swift in Sources */,
 				66A08A9727741DA700A7033D /* AnimatingBindingsView.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,
+				66A08AB227746D2500A7033D /* BundleDecodable.swift in Sources */,
+				66A08AA927746AD200A7033D /* ShenZhouView.swift in Sources */,
 				668AD0C12770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld in Sources */,
 				66A08AA62774649C00A7033D /* Expenses.swift in Sources */,
 				668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */,
