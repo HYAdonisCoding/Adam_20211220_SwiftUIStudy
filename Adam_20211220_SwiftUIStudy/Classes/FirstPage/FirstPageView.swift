@@ -7,10 +7,18 @@
 
 import SwiftUI
 
+class NavigationAction: ObservableObject {
+   @Published var backToRoot: Bool = false
+}
+
 struct FirstPageView: View {
+//    @EnvironmentObject var action: NavigationAction
+    @State var action: NavigationAction = NavigationAction()
+    
     private var data = [FirstPageModel("Actual Combat",
                                        [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
                                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
+                                        FirstPageDataModel(page: TeaView(), title: "TeaView", subTitle:""),
                                        ]),
                         FirstPageModel("Animation",
                                        [FirstPageDataModel(page: BaseAnimationView(), title: "BaseAnimationView", subTitle:"Implicit animation"),
