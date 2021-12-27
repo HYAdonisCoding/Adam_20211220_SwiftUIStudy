@@ -63,7 +63,7 @@ struct PlanView: View {
                 }
             }
         }
-        .navigationBarTitle(plan.name)
+        .navigationBarTitle(Text(plan.name), displayMode: .inline)
     }
 }
 
