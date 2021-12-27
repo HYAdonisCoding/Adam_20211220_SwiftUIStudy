@@ -11,6 +11,8 @@
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
 		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
 		668198792773195800A784CC /* AboutModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198782773195800A784CC /* AboutModifierView.swift */; };
+		668855AF27794A240025247E /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668855AE27794A240025247E /* AstronautView.swift */; };
+		668855B12779521A0025247E /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668855B02779521A0025247E /* Astronaut.swift */; };
 		668AD0B52770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */; };
 		668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B62770942C00F6EF88 /* AddAddressView.swift */; };
 		668AD0B92770943100F6EF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668AD0B82770943100F6EF88 /* Assets.xcassets */; };
@@ -59,7 +61,9 @@
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
 		668198782773195800A784CC /* AboutModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModifierView.swift; sourceTree = "<group>"; };
-		668AD0B12770942C00F6EF88 /* Adam_20211220_SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adam_20211220_SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		668855AE27794A240025247E /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		668855B02779521A0025247E /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		668AD0B12770942C00F6EF88 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam_20211220_SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		668AD0B62770942C00F6EF88 /* AddAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressView.swift; sourceTree = "<group>"; };
 		668AD0B82770943100F6EF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 		668AD0B22770942C00F6EF88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				668AD0B12770942C00F6EF88 /* Adam_20211220_SwiftUIStudy.app */,
+				668AD0B12770942C00F6EF88 /* SwiftUIStudy.app */,
 				668AD0C62770943100F6EF88 /* Adam_20211220_SwiftUIStudyTests.xctest */,
 				668AD0D02770943100F6EF88 /* Adam_20211220_SwiftUIStudyUITests.xctest */,
 			);
@@ -239,7 +243,9 @@
 			children = (
 				66A08AA827746AD200A7033D /* ShenZhouView.swift */,
 				66A08AAA27746AE000A7033D /* PlanView.swift */,
+				668855AE27794A240025247E /* AstronautView.swift */,
 				66A08AB327746E2400A7033D /* Plan.swift */,
+				668855B02779521A0025247E /* Astronaut.swift */,
 				66A08AAC27746CA400A7033D /* astronauts.json */,
 				66A08AAD27746CA400A7033D /* plans.json */,
 			);
@@ -271,7 +277,7 @@
 			);
 			name = Adam_20211220_SwiftUIStudy;
 			productName = Adam_20211220_SwiftUIStudy;
-			productReference = 668AD0B12770942C00F6EF88 /* Adam_20211220_SwiftUIStudy.app */;
+			productReference = 668AD0B12770942C00F6EF88 /* SwiftUIStudy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		668AD0C52770943100F6EF88 /* Adam_20211220_SwiftUIStudyTests */ = {
@@ -392,7 +398,9 @@
 				66A08A9927741E0C00A7033D /* ExplictAnimationsView.swift in Sources */,
 				668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */,
 				66A08AAB27746AE000A7033D /* PlanView.swift in Sources */,
+				668855AF27794A240025247E /* AstronautView.swift in Sources */,
 				66A08A9727741DA700A7033D /* AnimatingBindingsView.swift in Sources */,
+				668855B12779521A0025247E /* Astronaut.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,
@@ -582,7 +590,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adam.Adam-20211220-SwiftUIStudy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftUIStudy;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,7 +620,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adam.Adam-20211220-SwiftUIStudy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftUIStudy;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

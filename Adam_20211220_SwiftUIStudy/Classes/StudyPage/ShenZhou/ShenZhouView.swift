@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct ShenZhouView: View {
+    let plans: [Plan] = Bundle.main.decode("plans.json")
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        NavigationView {
+            List(plans) { plan in
+                NavigationLink(destination: PlanView(plan: plan)) {
+                    Image(plan.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 44, height: 44)
+                    
+                    VStack(alignment: .leading) {
+                        Text(plan.name).font(.headline)
+                        Text(plan.launchDate)
+                    }
+                }
+            }
+            .navigationBarTitle("神舟任务")
+//        }
     }
 }
 

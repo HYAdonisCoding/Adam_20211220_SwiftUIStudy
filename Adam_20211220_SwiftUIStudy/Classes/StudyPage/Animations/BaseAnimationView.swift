@@ -26,7 +26,7 @@ struct BaseAnimationView: View {
             
             /// 隐式动画 -- 进阶
             Button("抢红包") {
-
+                
             }
             .foregroundColor(.white)
             .padding(30)
@@ -46,6 +46,8 @@ struct BaseAnimationView: View {
                 self.amount2 = 2
             }
         }
+        .navigationTitle(Text("BaseAnimation"))
+            
     }
 }
 
