@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 class NavigationAction: ObservableObject {
    @Published var backToRoot: Bool = false
@@ -15,7 +16,11 @@ struct FirstPageView: View {
 //    @EnvironmentObject var action: NavigationAction
     @State var action: NavigationAction = NavigationAction()
     
-    private var data = [FirstPageModel("Actual Combat",
+    private var data = [FirstPageModel("About UIKit",
+                                       [FirstPageDataModel(page: AEControllerPage<AEFirstViewController>(), title: "UIKitController", subTitle:"Open UIKit  UIViewController"),
+                                        FirstPageDataModel(page: AEWebView(), title: "WebViewPage", subTitle:"Open WebView"),
+                                       ]),
+                        FirstPageModel("Actual Combat",
                                        [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
                                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
                                         FirstPageDataModel(page: TeaView(), title: "TeaView", subTitle:""),
