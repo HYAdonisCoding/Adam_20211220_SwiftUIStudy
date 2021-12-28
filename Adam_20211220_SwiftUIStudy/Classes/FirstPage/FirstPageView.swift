@@ -50,7 +50,7 @@ struct FirstPageView: View {
             List {
                 ForEach(data.indices) { section in
                     let s = data[section]
-                    Section(s.sectionTitle) {
+                    Section(header: Text(s.sectionTitle)) {
                         ForEach(s.datas.indices) { idx in
                             let m = s.datas[idx]
                             FirstPageTCell(m.page, m.title, m.subTitle)
