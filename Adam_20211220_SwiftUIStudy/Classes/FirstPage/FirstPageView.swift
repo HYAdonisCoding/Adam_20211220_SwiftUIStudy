@@ -19,12 +19,15 @@ struct FirstPageView: View {
     private var data = [FirstPageModel("About UIKit",
                                        [FirstPageDataModel(page: AEControllerPage<AEFirstViewController>(), title: "UIKitController", subTitle:"Open UIKit  UIViewController"),
                                         FirstPageDataModel(page: AEWebView(), title: "WebViewPage", subTitle:"Open WebView"),
-                                       ]),
+                                       ]
+                                      ),
                         FirstPageModel("Actual Combat",
                                        [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
                                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
                                         FirstPageDataModel(page: TeaView(), title: "TeaView", subTitle:""),
-                                       ]),
+                                        FirstPageDataModel(page: GetAPIData(), title: "GetAPIData From Apple", subTitle:"Need Scientific Internet access"),
+                                       ]
+                                      ),
                         FirstPageModel("Animation",
                                        [FirstPageDataModel(page: BaseAnimationView(), title: "BaseAnimationView", subTitle:"Implicit animation"),
                                         FirstPageDataModel(page: AnimatingBindingsView(), title: "AnimatingBindingsView"),
@@ -32,14 +35,17 @@ struct FirstPageView: View {
                                         FirstPageDataModel(page: MultipleImplicitAnimationView(), title: "MultipleImplicitAnimationView"),
                                         FirstPageDataModel(page: AnimatingGestureView(), title: "AnimatingGestureView"),
                                         FirstPageDataModel(page: TransitionsView(), title: "TransitionsView"),
-                                       ]),
+                                       ]
+                                      ),
                         FirstPageModel("Form",
                                        [FirstPageDataModel(page: AddAddressView(), title: "AddAddressView", subTitle:"Add recipient information, test form"),
-                                       ]),
+                                       ]
+                                      ),
                         FirstPageModel("View layout",
                                        [FirstPageDataModel(page: GuessFlagView(), title: "GuessFlagView", subTitle: "Guess the flag game"),
                                         FirstPageDataModel(page: AboutModifierView(), title: "AboutModifierView"),
-                                       ])
+                                       ]
+                                      )
                     ]
     
     /// 点击触发push时的key

@@ -27,22 +27,26 @@ struct GetAPIData: View {
                 Text(result.collectionName)
             }
         }
+        .navigationBarTitle(Text("itunes"), displayMode: .inline)
         .onAppear(perform: loadData)
     }
     
     func loadData() {
         guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else { return }
+        print(url)
         //最基本的发送GET请求的用法
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            print(error?.localizedDescription ?? "no error")
             guard let data = data,
                     let decodedData = try? JSONDecoder().decode(Response.self, from: data)
             else {
                 return
             }
+            print(decodedData.results)
             DispatchQueue.main.async {
                 self.results = decodedData.results
             }
-        }
+        }.resume()
     }
 }
 
