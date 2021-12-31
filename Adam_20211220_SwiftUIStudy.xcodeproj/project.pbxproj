@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66325EBA277DB2450005F5B7 /* MovieMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66325EB9277DB2450005F5B7 /* MovieMemoView.swift */; };
 		665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FB40E2771D88C00048D01 /* FirstPageView.swift */; };
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
 		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
@@ -22,6 +23,10 @@
 		668855B8277991650025247E /* TeaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668855B7277991650025247E /* TeaView.swift */; };
 		668855BA277991780025247E /* AddTeaAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668855B9277991780025247E /* AddTeaAddressView.swift */; };
 		668855BC2779918A0025247E /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668855BB2779918A0025247E /* CheckOutView.swift */; };
+		66896839277EE92E00714B2C /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66896838277EE92E00714B2C /* AddMovieView.swift */; };
+		6689683B277EEBF300714B2C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689683A277EEBF300714B2C /* EmojiRatingView.swift */; };
+		6689683D277EED5800714B2C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689683C277EED5800714B2C /* RatingView.swift */; };
+		6689683F277EEEAF00714B2C /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689683E277EEEAF00714B2C /* MovieDetailView.swift */; };
 		668AD0B52770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */; };
 		668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AD0B62770942C00F6EF88 /* AddAddressView.swift */; };
 		668AD0B92770943100F6EF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 668AD0B82770943100F6EF88 /* Assets.xcassets */; };
@@ -66,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66325EB9277DB2450005F5B7 /* MovieMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMemoView.swift; sourceTree = "<group>"; };
 		665FB40E2771D88C00048D01 /* FirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageView.swift; sourceTree = "<group>"; };
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		668855B7277991650025247E /* TeaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaView.swift; sourceTree = "<group>"; };
 		668855B9277991780025247E /* AddTeaAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeaAddressView.swift; sourceTree = "<group>"; };
 		668855BB2779918A0025247E /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
+		66896838277EE92E00714B2C /* AddMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieView.swift; sourceTree = "<group>"; };
+		6689683A277EEBF300714B2C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		6689683C277EED5800714B2C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		6689683E277EEEAF00714B2C /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		668AD0B12770942C00F6EF88 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		668AD0B42770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam_20211220_SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		668AD0B62770942C00F6EF88 /* AddAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressView.swift; sourceTree = "<group>"; };
@@ -135,6 +145,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66325EB8277DB2370005F5B7 /* MovieMemo */ = {
+			isa = PBXGroup;
+			children = (
+				66325EB9277DB2450005F5B7 /* MovieMemoView.swift */,
+				6689683A277EEBF300714B2C /* EmojiRatingView.swift */,
+				66896838277EE92E00714B2C /* AddMovieView.swift */,
+				6689683E277EEEAF00714B2C /* MovieDetailView.swift */,
+				6689683C277EED5800714B2C /* RatingView.swift */,
+			);
+			path = MovieMemo;
+			sourceTree = "<group>";
+		};
 		668198742773158700A784CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +194,7 @@
 				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
 				668198702772B3DB00A784CC /* GuessFlagView.swift */,
 				668198782773195800A784CC /* AboutModifierView.swift */,
+				66325EB8277DB2370005F5B7 /* MovieMemo */,
 				6687B7E8277AE7400054D542 /* AboutUIKit */,
 				668855B22779911F0025247E /* TeaView */,
 				66A08A93277407EE00A7033D /* Animations */,
@@ -438,7 +461,9 @@
 				66A08A9B27741E4100A7033D /* MultipleImplicitAnimationView.swift in Sources */,
 				668855B8277991650025247E /* TeaView.swift in Sources */,
 				66A08A9D27741E5900A7033D /* AnimatingGestureView.swift in Sources */,
+				6689683D277EED5800714B2C /* RatingView.swift in Sources */,
 				66A08AB427746E2400A7033D /* Plan.swift in Sources */,
+				66325EBA277DB2450005F5B7 /* MovieMemoView.swift in Sources */,
 				66A08A9927741E0C00A7033D /* ExplictAnimationsView.swift in Sources */,
 				668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */,
 				66A08AAB27746AE000A7033D /* PlanView.swift in Sources */,
@@ -461,8 +486,11 @@
 				668AD0B52770942C00F6EF88 /* Adam_20211220_SwiftUIStudyApp.swift in Sources */,
 				668855BA277991780025247E /* AddTeaAddressView.swift in Sources */,
 				668855B4277991470025247E /* Order.swift in Sources */,
+				6689683F277EEEAF00714B2C /* MovieDetailView.swift in Sources */,
 				668855BC2779918A0025247E /* CheckOutView.swift in Sources */,
 				66A08A952774080C00A7033D /* BaseAnimationView.swift in Sources */,
+				66896839277EE92E00714B2C /* AddMovieView.swift in Sources */,
+				6689683B277EEBF300714B2C /* EmojiRatingView.swift in Sources */,
 				66A08AA42774629100A7033D /* AddView.swift in Sources */,
 				668198792773195800A784CC /* AboutModifierView.swift in Sources */,
 				66A08AA22774620800A7033D /* ExpensesView.swift in Sources */,

@@ -13,7 +13,8 @@ func randomColor() -> Color {
 }
 
 struct FirstPageTCell: View {
-    
+    @Environment(\.managedObjectContext) var context
+
     init(_ pushViewClass: Any, _ title: String, _ subTitle: String = "") {
         self.pushViewClass = pushViewClass
         self.title = title
@@ -25,7 +26,9 @@ struct FirstPageTCell: View {
     
     var body: some View {
          
-        NavigationLink(destination: AnyView(_fromValue: pushViewClass)) {
+        NavigationLink(
+            destination: AnyView(_fromValue: pushViewClass)?.environment(\.managedObjectContext, context)
+        ) {
             VStack(alignment: .leading, spacing: 5) {
                 Text(title)
                     .font(.headline)

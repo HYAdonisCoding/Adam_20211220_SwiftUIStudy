@@ -13,10 +13,16 @@ class NavigationAction: ObservableObject {
 }
 
 struct FirstPageView: View {
+    @Environment(\.managedObjectContext) var context
+
 //    @EnvironmentObject var action: NavigationAction
     @State var action: NavigationAction = NavigationAction()
     
-    private var data = [FirstPageModel("About UIKit",
+    private var data = [FirstPageModel("About CoreData",
+                                       [FirstPageDataModel(page: MovieMemoView(), title: "MovieMemoView", subTitle:""),
+                                       ]
+                                      ),
+                        FirstPageModel("About UIKit",
                                        [FirstPageDataModel(page: AEControllerPage<AEFirstViewController>(), title: "UIKitController", subTitle:"Open UIKit  UIViewController"),
                                         FirstPageDataModel(page: AEWebView(), title: "WebViewPage", subTitle:"Open WebView"),
                                        ]
@@ -60,6 +66,7 @@ struct FirstPageView: View {
                         ForEach(s.datas.indices) { idx in
                             let m = s.datas[idx]
                             FirstPageTCell(m.page, m.title, m.subTitle)
+                                .environment(\.managedObjectContext, context)
                             
                         }
                     }
