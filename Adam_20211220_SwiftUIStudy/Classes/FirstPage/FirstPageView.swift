@@ -20,6 +20,7 @@ struct FirstPageView: View {
     
     private var data = [FirstPageModel("About CoreData",
                                        [FirstPageDataModel(page: MovieMemoView(), title: "MovieMemoView", subTitle:""),
+                                       FirstPageDataModel(page: AttributesDefaultValueView(), title: "AttributesDefaultValueView", subTitle:""),
                                        ]
                                       ),
                         FirstPageModel("About UIKit",
@@ -66,7 +67,7 @@ struct FirstPageView: View {
                         ForEach(s.datas.indices) { idx in
                             let m = s.datas[idx]
                             FirstPageTCell(m.page, m.title, m.subTitle)
-                                .environment(\.managedObjectContext, context)
+                                .environment(\.managedObjectContext, self.context)
                             
                         }
                     }

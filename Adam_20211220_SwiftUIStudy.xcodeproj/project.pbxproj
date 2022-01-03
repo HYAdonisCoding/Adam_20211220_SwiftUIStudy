@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		66325EBA277DB2450005F5B7 /* MovieMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66325EB9277DB2450005F5B7 /* MovieMemoView.swift */; };
 		665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FB40E2771D88C00048D01 /* FirstPageView.swift */; };
+		6660F8C32783177A0088D89E /* AttributesDefaultValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */; };
+		6660F907278321FC0088D89E /* Entity1+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */; };
+		6660F908278321FC0088D89E /* Entity1+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */; };
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
 		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
 		668198792773195800A784CC /* AboutModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198782773195800A784CC /* AboutModifierView.swift */; };
@@ -73,6 +76,9 @@
 /* Begin PBXFileReference section */
 		66325EB9277DB2450005F5B7 /* MovieMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMemoView.swift; sourceTree = "<group>"; };
 		665FB40E2771D88C00048D01 /* FirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageView.swift; sourceTree = "<group>"; };
+		6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesDefaultValueView.swift; sourceTree = "<group>"; };
+		6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity1+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity1+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
 		668198782773195800A784CC /* AboutModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModifierView.swift; sourceTree = "<group>"; };
@@ -157,6 +163,16 @@
 			path = MovieMemo;
 			sourceTree = "<group>";
 		};
+		6660F8BD278316820088D89E /* About CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */,
+				6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */,
+				6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */,
+			);
+			path = "About CoreData";
+			sourceTree = "<group>";
+		};
 		668198742773158700A784CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
 				668198702772B3DB00A784CC /* GuessFlagView.swift */,
 				668198782773195800A784CC /* AboutModifierView.swift */,
+				6660F8BD278316820088D89E /* About CoreData */,
 				66325EB8277DB2370005F5B7 /* MovieMemo */,
 				6687B7E8277AE7400054D542 /* AboutUIKit */,
 				668855B22779911F0025247E /* TeaView */,
@@ -470,6 +487,7 @@
 				668855AF27794A240025247E /* AstronautView.swift in Sources */,
 				66A08A9727741DA700A7033D /* AnimatingBindingsView.swift in Sources */,
 				6687B7F0277AEF870054D542 /* AEWebView.swift in Sources */,
+				6660F8C32783177A0088D89E /* AttributesDefaultValueView.swift in Sources */,
 				668855B12779521A0025247E /* Astronaut.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
 				6687B7EC277AEC7C0054D542 /* WebViewPage.swift in Sources */,
@@ -489,7 +507,9 @@
 				6689683F277EEEAF00714B2C /* MovieDetailView.swift in Sources */,
 				668855BC2779918A0025247E /* CheckOutView.swift in Sources */,
 				66A08A952774080C00A7033D /* BaseAnimationView.swift in Sources */,
+				6660F908278321FC0088D89E /* Entity1+CoreDataProperties.swift in Sources */,
 				66896839277EE92E00714B2C /* AddMovieView.swift in Sources */,
+				6660F907278321FC0088D89E /* Entity1+CoreDataClass.swift in Sources */,
 				6689683B277EEBF300714B2C /* EmojiRatingView.swift in Sources */,
 				66A08AA42774629100A7033D /* AddView.swift in Sources */,
 				668198792773195800A784CC /* AboutModifierView.swift in Sources */,

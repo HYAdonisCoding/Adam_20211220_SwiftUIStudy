@@ -27,7 +27,7 @@ struct FirstPageTCell: View {
     var body: some View {
          
         NavigationLink(
-            destination: AnyView(_fromValue: pushViewClass)?.environment(\.managedObjectContext, context)
+            destination: AnyView(_fromValue: pushViewClass)?.environment(\.managedObjectContext, self.context)
         ) {
             VStack(alignment: .leading, spacing: 5) {
                 Text(title)
