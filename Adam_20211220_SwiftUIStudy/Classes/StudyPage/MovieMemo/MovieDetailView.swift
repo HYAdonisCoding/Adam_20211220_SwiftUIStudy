@@ -20,7 +20,9 @@ struct MovieDetailView: View {
             VStack {
                 ZStack(alignment: .bottomTrailing) {
                     Image(self.movie.type ?? "喜剧")
+//                        .renderingMode(.original)
                         .frame(maxWidth: geometryReader.size.width)
+                        
                     Text(self.movie.type ?? "喜剧")
                         .font(.caption)
                         .fontWeight(.black)
