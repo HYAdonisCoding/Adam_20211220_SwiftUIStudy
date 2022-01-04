@@ -21,6 +21,10 @@ struct FirstPageView: View {
     private var data = [FirstPageModel("About CoreData",
                                        [FirstPageDataModel(page: MovieMemoView(), title: "MovieMemoView", subTitle:""),
                                        FirstPageDataModel(page: AttributesDefaultValueView(), title: "AttributesDefaultValueView", subTitle:""),
+                                        FirstPageDataModel(page: HasChangesAndConstraintsView(), title: "HasChangesAndConstraintsView", subTitle:""),
+                                        
+                                        FirstPageDataModel(page: NSPredicateView(), title: "NSPredicateView", subTitle:""),
+                                        FirstPageDataModel(page: RelationshipsView(), title: "RelationshipsView", subTitle:""),
                                        ]
                                       ),
                         FirstPageModel("About UIKit",

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Article" representedClassName="Article" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Author" inverseName="article" inverseEntity="Author"/>
+    </entity>
+    <entity name="Author" representedClassName="Author" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="article" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Article" inverseName="author" inverseEntity="Article"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Entity1" representedClassName="Entity1" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Entity2" representedClassName="Entity2" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Entity3" representedClassName="Entity3" syncable="YES" codeGenerationType="class">
+        <attribute name="englishName" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
@@ -14,8 +36,12 @@
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="Entity1" positionX="-63" positionY="27" width="128" height="44"/>
+        <element name="Entity2" positionX="-45" positionY="45" width="128" height="44"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Movie" positionX="-63" positionY="-9" width="128" height="104"/>
-        <element name="Entity1" positionX="-63" positionY="27" width="128" height="44"/>
+        <element name="Entity3" positionX="-54" positionY="27" width="128" height="59"/>
+        <element name="Author" positionX="-45" positionY="36" width="128" height="74"/>
+        <element name="Article" positionX="-36" positionY="45" width="128" height="74"/>
     </elements>
 </model>

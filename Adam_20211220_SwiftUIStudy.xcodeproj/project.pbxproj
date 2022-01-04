@@ -12,6 +12,11 @@
 		6660F8C32783177A0088D89E /* AttributesDefaultValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */; };
 		6660F907278321FC0088D89E /* Entity1+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */; };
 		6660F908278321FC0088D89E /* Entity1+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */; };
+		6660F90A278323930088D89E /* HasChangesAndConstraintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F909278323930088D89E /* HasChangesAndConstraintsView.swift */; };
+		6662DB372783D7EC002D3BF6 /* NSPredicateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB362783D7EC002D3BF6 /* NSPredicateView.swift */; };
+		6662DB392783DD56002D3BF6 /* RelationshipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB382783DD56002D3BF6 /* RelationshipsView.swift */; };
+		6662DB402783DF57002D3BF6 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB3E2783DF57002D3BF6 /* Author+CoreDataClass.swift */; };
+		6662DB412783DF57002D3BF6 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB3F2783DF57002D3BF6 /* Author+CoreDataProperties.swift */; };
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
 		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
 		668198792773195800A784CC /* AboutModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198782773195800A784CC /* AboutModifierView.swift */; };
@@ -79,6 +84,11 @@
 		6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesDefaultValueView.swift; sourceTree = "<group>"; };
 		6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity1+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity1+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6660F909278323930088D89E /* HasChangesAndConstraintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasChangesAndConstraintsView.swift; sourceTree = "<group>"; };
+		6662DB362783D7EC002D3BF6 /* NSPredicateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateView.swift; sourceTree = "<group>"; };
+		6662DB382783DD56002D3BF6 /* RelationshipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipsView.swift; sourceTree = "<group>"; };
+		6662DB3E2783DF57002D3BF6 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6662DB3F2783DF57002D3BF6 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
 		668198782773195800A784CC /* AboutModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModifierView.swift; sourceTree = "<group>"; };
@@ -166,9 +176,14 @@
 		6660F8BD278316820088D89E /* About CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6662DB3E2783DF57002D3BF6 /* Author+CoreDataClass.swift */,
+				6662DB3F2783DF57002D3BF6 /* Author+CoreDataProperties.swift */,
 				6660F905278321FC0088D89E /* Entity1+CoreDataClass.swift */,
 				6660F906278321FC0088D89E /* Entity1+CoreDataProperties.swift */,
 				6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */,
+				6660F909278323930088D89E /* HasChangesAndConstraintsView.swift */,
+				6662DB362783D7EC002D3BF6 /* NSPredicateView.swift */,
+				6662DB382783DD56002D3BF6 /* RelationshipsView.swift */,
 			);
 			path = "About CoreData";
 			sourceTree = "<group>";
@@ -478,6 +493,7 @@
 				66A08A9B27741E4100A7033D /* MultipleImplicitAnimationView.swift in Sources */,
 				668855B8277991650025247E /* TeaView.swift in Sources */,
 				66A08A9D27741E5900A7033D /* AnimatingGestureView.swift in Sources */,
+				6662DB392783DD56002D3BF6 /* RelationshipsView.swift in Sources */,
 				6689683D277EED5800714B2C /* RatingView.swift in Sources */,
 				66A08AB427746E2400A7033D /* Plan.swift in Sources */,
 				66325EBA277DB2450005F5B7 /* MovieMemoView.swift in Sources */,
@@ -490,6 +506,7 @@
 				6660F8C32783177A0088D89E /* AttributesDefaultValueView.swift in Sources */,
 				668855B12779521A0025247E /* Astronaut.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
+				6660F90A278323930088D89E /* HasChangesAndConstraintsView.swift in Sources */,
 				6687B7EC277AEC7C0054D542 /* WebViewPage.swift in Sources */,
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,
@@ -497,6 +514,7 @@
 				66A08AA927746AD200A7033D /* ShenZhouView.swift in Sources */,
 				668855B6277991560025247E /* GetAPIData.swift in Sources */,
 				6687B7EA277AEB760054D542 /* AEFirstViewController.swift in Sources */,
+				6662DB372783D7EC002D3BF6 /* NSPredicateView.swift in Sources */,
 				668AD0C12770943100F6EF88 /* Adam_20211220_SwiftUIStudy.xcdatamodeld in Sources */,
 				66A08AA62774649C00A7033D /* Expenses.swift in Sources */,
 				668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */,
@@ -510,8 +528,10 @@
 				6660F908278321FC0088D89E /* Entity1+CoreDataProperties.swift in Sources */,
 				66896839277EE92E00714B2C /* AddMovieView.swift in Sources */,
 				6660F907278321FC0088D89E /* Entity1+CoreDataClass.swift in Sources */,
+				6662DB412783DF57002D3BF6 /* Author+CoreDataProperties.swift in Sources */,
 				6689683B277EEBF300714B2C /* EmojiRatingView.swift in Sources */,
 				66A08AA42774629100A7033D /* AddView.swift in Sources */,
+				6662DB402783DF57002D3BF6 /* Author+CoreDataClass.swift in Sources */,
 				668198792773195800A784CC /* AboutModifierView.swift in Sources */,
 				66A08AA22774620800A7033D /* ExpensesView.swift in Sources */,
 				66A08A9F27741E6C00A7033D /* TransitionsView.swift in Sources */,
