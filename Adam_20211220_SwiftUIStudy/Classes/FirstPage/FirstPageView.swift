@@ -18,7 +18,14 @@ struct FirstPageView: View {
 //    @EnvironmentObject var action: NavigationAction
     @State var action: NavigationAction = NavigationAction()
     
-    private var data = [FirstPageModel("About CoreData",
+    private var data = [FirstPageModel("About UIKit",
+                                       [FirstPageDataModel(page: AEControllerPage<AEFirstViewController>(), title: "UIKitController", subTitle:"Open UIKit  UIViewController"),
+                                        FirstPageDataModel(page: AEWebView(), title: "WebViewPage", subTitle:"Open WebView"),
+                                        FirstPageDataModel(page: UploadImageView(), title: "UploadImageView", subTitle:""),
+                                        FirstPageDataModel(page: MapView(), title: "MapView", subTitle:""),
+                                       ]
+                                      ),
+                        FirstPageModel("About CoreData",
                                        [FirstPageDataModel(page: MovieMemoView(), title: "MovieMemoView", subTitle:""),
                                        FirstPageDataModel(page: AttributesDefaultValueView(), title: "AttributesDefaultValueView", subTitle:""),
                                         FirstPageDataModel(page: HasChangesAndConstraintsView(), title: "HasChangesAndConstraintsView", subTitle:""),
@@ -27,11 +34,7 @@ struct FirstPageView: View {
                                         FirstPageDataModel(page: RelationshipsView(), title: "RelationshipsView", subTitle:""),
                                        ]
                                       ),
-                        FirstPageModel("About UIKit",
-                                       [FirstPageDataModel(page: AEControllerPage<AEFirstViewController>(), title: "UIKitController", subTitle:"Open UIKit  UIViewController"),
-                                        FirstPageDataModel(page: AEWebView(), title: "WebViewPage", subTitle:"Open WebView"),
-                                       ]
-                                      ),
+                        
                         FirstPageModel("Actual Combat",
                                        [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
                                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
