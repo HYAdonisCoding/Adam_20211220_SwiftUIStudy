@@ -20,7 +20,9 @@ struct FirstPageView: View {
     
     private var data = [
         FirstPageModel("Actual Combat",
-                       [FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
+                       [FirstPageDataModel(page: GesturesBasicView(), title: "GesturesBasicView", subTitle:""),
+                        FirstPageDataModel(page: ExpensesView(), title: "ExpensesView", subTitle:""),
+                        
                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
                         FirstPageDataModel(page: TeaView(), title: "TeaView", subTitle:""),
                         FirstPageDataModel(page: GetAPIData(), title: "GetAPIData From Apple", subTitle:"Need Scientific Internet access"),
