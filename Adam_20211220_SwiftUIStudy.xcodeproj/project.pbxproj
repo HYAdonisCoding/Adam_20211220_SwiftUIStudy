@@ -21,6 +21,10 @@
 		6662DB462783ED58002D3BF6 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB452783ED58002D3BF6 /* ImageSaver.swift */; };
 		6662DB482783EEFB002D3BF6 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB472783EEFB002D3BF6 /* ImagePickerView.swift */; };
 		6662DB4A2783F138002D3BF6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB492783F138002D3BF6 /* MapView.swift */; };
+		6662DB4D2783F608002D3BF6 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB4C2783F608002D3BF6 /* ContactView.swift */; };
+		6662DB4F2783F652002D3BF6 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB4E2783F652002D3BF6 /* Coder.swift */; };
+		6662DB512784187D002D3BF6 /* CoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB502784187D002D3BF6 /* CoderView.swift */; };
+		6662DB5327841C02002D3BF6 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6662DB5227841C02002D3BF6 /* MeView.swift */; };
 		668198712772B3DB00A784CC /* GuessFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198702772B3DB00A784CC /* GuessFlagView.swift */; };
 		668198732772F1E600A784CC /* FirstPageTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198722772F1E600A784CC /* FirstPageTCell.swift */; };
 		668198792773195800A784CC /* AboutModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668198782773195800A784CC /* AboutModifierView.swift */; };
@@ -83,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6614E5C8278428FC0040D5CC /* CodeScanner */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeScanner; path = ../../Github/CodeScanner; sourceTree = "<group>"; };
 		66325EB9277DB2450005F5B7 /* MovieMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMemoView.swift; sourceTree = "<group>"; };
 		665FB40E2771D88C00048D01 /* FirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageView.swift; sourceTree = "<group>"; };
 		6660F8C22783177A0088D89E /* AttributesDefaultValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesDefaultValueView.swift; sourceTree = "<group>"; };
@@ -97,6 +102,10 @@
 		6662DB452783ED58002D3BF6 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		6662DB472783EEFB002D3BF6 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		6662DB492783F138002D3BF6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		6662DB4C2783F608002D3BF6 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		6662DB4E2783F652002D3BF6 /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
+		6662DB502784187D002D3BF6 /* CoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderView.swift; sourceTree = "<group>"; };
+		6662DB5227841C02002D3BF6 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		668198702772B3DB00A784CC /* GuessFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagView.swift; sourceTree = "<group>"; };
 		668198722772F1E600A784CC /* FirstPageTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTCell.swift; sourceTree = "<group>"; };
 		668198782773195800A784CC /* AboutModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModifierView.swift; sourceTree = "<group>"; };
@@ -207,6 +216,25 @@
 			path = WorkingWithUIKit;
 			sourceTree = "<group>";
 		};
+		6662DB4B2783F5FB002D3BF6 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				6662DB4C2783F608002D3BF6 /* ContactView.swift */,
+				6662DB4E2783F652002D3BF6 /* Coder.swift */,
+				6662DB502784187D002D3BF6 /* CoderView.swift */,
+				6662DB5227841C02002D3BF6 /* MeView.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		6662DB6027842381002D3BF6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				6614E5C8278428FC0040D5CC /* CodeScanner */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		668198742773158700A784CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +272,7 @@
 				668AD0B62770942C00F6EF88 /* AddAddressView.swift */,
 				668198702772B3DB00A784CC /* GuessFlagView.swift */,
 				668198782773195800A784CC /* AboutModifierView.swift */,
+				6662DB4B2783F5FB002D3BF6 /* Contact */,
 				6662DB422783E8FF002D3BF6 /* WorkingWithUIKit */,
 				6660F8BD278316820088D89E /* About CoreData */,
 				66325EB8277DB2370005F5B7 /* MovieMemo */,
@@ -282,6 +311,7 @@
 		668AD0A82770942C00F6EF88 = {
 			isa = PBXGroup;
 			children = (
+				6662DB6027842381002D3BF6 /* Packages */,
 				668AD0B32770942C00F6EF88 /* Adam_20211220_SwiftUIStudy */,
 				668AD0C92770943100F6EF88 /* Adam_20211220_SwiftUIStudyTests */,
 				668AD0D32770943100F6EF88 /* Adam_20211220_SwiftUIStudyUITests */,
@@ -512,7 +542,9 @@
 			files = (
 				66A08A9B27741E4100A7033D /* MultipleImplicitAnimationView.swift in Sources */,
 				668855B8277991650025247E /* TeaView.swift in Sources */,
+				6662DB512784187D002D3BF6 /* CoderView.swift in Sources */,
 				66A08A9D27741E5900A7033D /* AnimatingGestureView.swift in Sources */,
+				6662DB4D2783F608002D3BF6 /* ContactView.swift in Sources */,
 				6662DB442783E964002D3BF6 /* UploadImageView.swift in Sources */,
 				6662DB392783DD56002D3BF6 /* RelationshipsView.swift in Sources */,
 				6689683D277EED5800714B2C /* RatingView.swift in Sources */,
@@ -525,6 +557,7 @@
 				66A08A9727741DA700A7033D /* AnimatingBindingsView.swift in Sources */,
 				6687B7F0277AEF870054D542 /* AEWebView.swift in Sources */,
 				6662DB4A2783F138002D3BF6 /* MapView.swift in Sources */,
+				6662DB4F2783F652002D3BF6 /* Coder.swift in Sources */,
 				6660F8C32783177A0088D89E /* AttributesDefaultValueView.swift in Sources */,
 				668855B12779521A0025247E /* Astronaut.swift in Sources */,
 				665FB40F2771D88C00048D01 /* FirstPageView.swift in Sources */,
@@ -534,6 +567,7 @@
 				668AD0BE2770943100F6EF88 /* Persistence.swift in Sources */,
 				668AD0B72770942C00F6EF88 /* AddAddressView.swift in Sources */,
 				66A08AB227746D2500A7033D /* BundleDecodable.swift in Sources */,
+				6662DB5327841C02002D3BF6 /* MeView.swift in Sources */,
 				66A08AA927746AD200A7033D /* ShenZhouView.swift in Sources */,
 				668855B6277991560025247E /* GetAPIData.swift in Sources */,
 				6687B7EA277AEB760054D542 /* AEFirstViewController.swift in Sources */,
@@ -722,6 +756,7 @@
 				DEVELOPMENT_TEAM = N2KQ965WEJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要扫描二维码";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -754,6 +789,7 @@
 				DEVELOPMENT_TEAM = N2KQ965WEJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要扫描二维码";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
