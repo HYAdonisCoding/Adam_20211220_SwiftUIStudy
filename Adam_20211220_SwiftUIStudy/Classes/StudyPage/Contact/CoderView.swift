@@ -13,23 +13,24 @@ enum CoderType {
 }
 
 struct CoderView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject var coders: Coders
     @State private var showSheet = false
     
-    var coderType: CoderType {
-        didSet {
-            switch coderType {
-            case .all:
-                title = "全栈开发者"
-            case .apple:
-                title = "苹果开发者"
-            case .android:
-                title = "安卓开发者"
-            }
+    var coderType: CoderType
+    
+    var title: String {
+        switch coderType {
+        case .all:
+            return "全栈开发者"
+        case .apple:
+            return "苹果开发者"
+        case .android:
+            return "安卓开发者"
         }
     }
-    
-    @State private var title: String  = ""
     
     var filteredCoders: [Coder] {
         switch coderType {
@@ -42,33 +43,63 @@ struct CoderView: View {
 
         }
     }
+
     var body: some View {
-        List {
-            ForEach(filteredCoders) { coder in
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(coder.name).font(.headline)
-                    Text(coder.phone).foregroundColor(.secondary)
-                }
-                .contextMenu{
-                    Button(coder.isApple ? "标记为安卓开发者" : "标记为苹果开发者") {
-                            self.coders.toggle(coder)
+        NavigationView {
+            List {
+                ForEach(filteredCoders) { coder in
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(coder.name).font(.headline)
+                        Text(coder.phone).foregroundColor(.secondary)
                     }
+                    .contextMenu{
+                        Button(coder.isApple ? "标记为安卓开发者" : "标记为苹果开发者") {
+                            self.coders.toggle(coder)
+                        }
+                    }
+                }
+                .onDelete(perform: deleteCoder)
+            }
+            .navigationBarTitle(title, displayMode: .inline)
+            //            .navigationTitle(title)
+            .navigationBarItems(
+                leading: Button(action: {
+                    self.showSheet.toggle()
+                    
+                }) {
+                    BarButtonView(type: .scan)
+                    
+                    
+                },
+                trailing: Button(action: {
+                    /// 关闭页面
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    VStack {
+                        BarButtonView()
+                    }
+                }
+            )
+            .sheet(isPresented: $showSheet) {
+                print("dismiss")
+            } content: {
+                //            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+                ManualAddCoderView { name, phone in
+                    let coder = Coder()
+                    coder.name = name
+                    coder.phone = phone
+                    coders.add(coder)
                 }
             }
         }
-        .navigationBarTitle(Text(title), displayMode: .inline)
-        .navigationBarItems(trailing: Button(action: {
-            self.showSheet.toggle()
-        }) {
-            Image(systemName: "qrcode.viewfinder")
-            Text("扫一扫")
-        })
-        .sheet(isPresented: $showSheet) {
-            print("dismiss")
-        } content: {
-//            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+        
+        
+    }
+    func deleteCoder(indexSet: IndexSet) {
+        for index in indexSet {
+            coders.remove(filteredCoders[index])
         }
-
+        
     }
     
 //    func handleScan(result: Result<String, CodeScannerView.ScanError>) {

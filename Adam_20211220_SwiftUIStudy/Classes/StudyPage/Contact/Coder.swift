@@ -8,7 +8,7 @@
 import Foundation
 
 class Coder: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     var name = ""
     var phone = ""
     fileprivate(set) var isApple = true
@@ -16,8 +16,8 @@ class Coder: Identifiable, Codable {
 
 class Coders: ObservableObject {
     static let allCodersKey = "allCoders"
-    @Published private(set) var allCoders: [Coder] = []
-    
+    @Published  var allCoders: [Coder] = []
+    //private(set)
     init() {
         if let data = UserDefaults.standard.data(forKey: Self.allCodersKey),
            let allCoders = try? JSONDecoder().decode([Coder].self, from: data)
@@ -25,7 +25,16 @@ class Coders: ObservableObject {
             self.allCoders = allCoders
         }
     }
-    
+    func remove(_ coder: Coder) {
+        objectWillChange.send()
+        self.allCoders.removeAll(where: { $0.name == coder.name && $0.phone == coder.phone })
+        save()
+    }
+    func add(_ coder: Coder) {
+        objectWillChange.send()
+        self.allCoders.append(coder)
+        save()
+    }
     func toggle(_ coder: Coder) {
         objectWillChange.send()
         coder.isApple.toggle()

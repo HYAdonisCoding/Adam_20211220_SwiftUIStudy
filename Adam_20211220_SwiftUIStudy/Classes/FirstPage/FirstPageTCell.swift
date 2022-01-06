@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var colors = [Color.red, Color.orange, Color.yellow, Color.green, Color.blue, Color.purple, Color.gray]
+var colors = [Color.red, Color.orange, Color.yellow, Color.green, Color.blue, Color.purple]
 func randomColor() -> Color {
     colors[Int.random(in: 0..<colors.count)]
 }

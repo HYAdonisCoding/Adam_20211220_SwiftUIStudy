@@ -16,7 +16,7 @@ struct ContactView: View {
             CoderView(coderType: .all)
                 .tabItem {
                     Image(systemName: "person.3")
-                    Text("全栈")
+                    Text("FullStack")
                 }
 
             CoderView(coderType: .apple)

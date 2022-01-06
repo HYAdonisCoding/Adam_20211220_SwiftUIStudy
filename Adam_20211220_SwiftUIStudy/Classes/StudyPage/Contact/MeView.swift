@@ -9,6 +9,9 @@ import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 struct MeView: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    
     let context = CIContext()
     
     let filter = CIFilter.qrCodeGenerator()
@@ -17,23 +20,32 @@ struct MeView: View {
     @State private var phone = ""
     
     var body: some View {
-        VStack {
-            TextField("姓名", text: $name)
-                .font(.title)
-                .padding(.horizontal)
-            TextField("电话", text: $phone)
-                .font(.title)
-                .keyboardType(.numberPad)
-                .padding(.horizontal)
-            Image(uiImage: generateQRCode("\(name)\n\(phone)"))
-                .interpolation(.none)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-            
-            Spacer()
+        NavigationView {
+            VStack {
+                TextField("姓名", text: $name)
+                    .font(.title)
+                    .padding(.horizontal)
+                TextField("电话", text: $phone)
+                    .font(.title)
+                    .keyboardType(.numberPad)
+                    .padding(.horizontal)
+                Image(uiImage: generateQRCode("\(name)\n\(phone)"))
+                    .interpolation(.none)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                
+                Spacer()
+            }
+            .navigationTitle("我的二维码")
+            .navigationBarItems(trailing: Button(action: {
+                /// 关闭页面
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                BarButtonView()
+            })
         }
-        .navigationTitle("我的二维码")
+        
     }
     
     func generateQRCode(_ str: String) -> UIImage {

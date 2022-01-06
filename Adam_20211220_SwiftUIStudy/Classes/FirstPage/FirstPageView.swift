@@ -30,7 +30,7 @@ struct FirstPageView: View {
                         FirstPageDataModel(page: ShenZhouView(), title: "ShenZhouView", subTitle:""),
                         FirstPageDataModel(page: TeaView(), title: "TeaView", subTitle:""),
                         FirstPageDataModel(page: GetAPIData(), title: "GetAPIData From Apple", subTitle:"Need Scientific Internet access"),
-                        FirstPageDataModel(page: ContactView(), title: "ContactView", subTitle:""),
+                        FirstPageDataModel(page: ContactView(), title: "ContactView", subTitle:"", type: .present),
                        ]
                       ),
         FirstPageModel("About UIKit",
@@ -82,8 +82,15 @@ struct FirstPageView: View {
                     Section(header: Text(s.sectionTitle)) {
                         ForEach(s.datas.indices) { idx in
                             let m = s.datas[idx]
-                            FirstPageTCell(m.page, m.title, m.subTitle)
-                                .environment(\.managedObjectContext, self.context)
+                            if m.type == .present {
+                                FirstPagePresentTCell(m.page, m.title, m.subTitle)
+                                    .environment(\.managedObjectContext, self.context)
+                                
+                            } else {
+                                
+                                FirstPageTCell(m.page, m.title, m.subTitle)
+                                    .environment(\.managedObjectContext, self.context)
+                            }
                             
                         }
                     }
@@ -114,9 +121,15 @@ struct FirstPageModel: Identifiable {
         self.datas = datas
     }
 }
+enum ActionType {
+    case push, present
+}
 struct FirstPageDataModel: Identifiable {
     var id = UUID()
     var page: Any
     var title: String
     var subTitle: String = ""
+    
+    /// 类型默认是push
+    var type: ActionType = .push
 }
